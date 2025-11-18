@@ -10,7 +10,7 @@ df = pd.read_excel("C:/Users/thiagorotundo/Documents/sistemas/vscode jhsf/automa
 driver = webdriver.Chrome()
 driver.get("https://nfseembudasartes.obaratec.com.br/ords/embu01/f?p=935:65::::65::")
  
-# Loop pelos dados
+# Loop pelos dados 
 for _, row in df.iterrows():
     # Preencher campos (IDs ou NAME devem ser ajustados conforme HTML real)
     driver.find_element(By.NAME, "P65_COTR_NUM_CNPJ").send_keys(row["CNPJ"])

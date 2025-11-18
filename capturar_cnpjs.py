@@ -6,13 +6,13 @@ import os
 
 ARQUIVO_CNPJS = "C:/Users/thiagorotundo/Documents/sistemas/vscode jhsf/automacoes/cnpjs.csv"
 ARQUIVO_SAIDA = "C:/Users/thiagorotundo/Documents/sistemas/vscode jhsf/automacoes/dados_cnpjs_invertexto.xlsx"
-TOKEN = "23046|uxuPMkgRr98WAuBZ80x20cn4fPPI2Huv"
+TOKEN = "seu token"
 
 # Lê os CNPJs 
 df_cnpjs = pd.read_csv(ARQUIVO_CNPJS, header=None, names=['CNPJ'])
 
 # Se já existir arquivo de saída, carrega para continuar
-if os.path.exists(ARQUIVO_SAIDA):
+if os.path.exists(ARQUIVO_SAIDA): 
     df_saida = pd.read_excel(ARQUIVO_SAIDA)
     dados_coletados = df_saida.to_dict(orient="records")
     cnpjs_existentes = set(df_saida['CNPJ'].astype(str))
