@@ -8,7 +8,7 @@ ARQUIVO_CNPJS = "C:/Users/thiagorotundo/Documents/sistemas/vscode jhsf/automacoe
 ARQUIVO_SAIDA = "C:/Users/thiagorotundo/Documents/sistemas/vscode jhsf/automacoes/dados_cnpjs_invertexto.xlsx"
 TOKEN = "23046|uxuPMkgRr98WAuBZ80x20cn4fPPI2Huv"
 
-# Lê os CNPJs
+# Lê os CNPJs 
 df_cnpjs = pd.read_csv(ARQUIVO_CNPJS, header=None, names=['CNPJ'])
 
 # Se já existir arquivo de saída, carrega para continuar
