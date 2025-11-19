@@ -57,4 +57,3 @@ O projeto foi desenvolvido como exercício prático de:
 
 ---
 
-Sinta-se à vontade para usar como estudo ou adaptar para outras necessidades.
