@@ -1,22 +1,60 @@
-**Consulta de CNPJs – Automação com Python**
+# Automação de Cadastro de Empresas
 
-Automação em Python para consulta e extração de informações de CNPJs utilizando a API do Invertexto.
-O script realiza consultas em massa a partir de um arquivo CSV, processa cada CNPJ, extrai dados relevantes e salva tudo em um arquivo Excel.
-Além disso, gera um arquivo de log registrando cada etapa da execução.
+Este projeto realiza o fluxo completo de captura e cadastro de empresas utilizando Python, Selenium e Pandas.
 
+## Objetivo
 
-Funcionalidades
+Automatizar o processo de cadastro de empresas em sistemas públicos, reduzindo trabalho manual e evitando erros repetitivos.
 
-Leitura automática de CNPJs de um arquivo .csv
+## Como funciona
 
-Consulta individual de cada CNPJ na API do Invertexto
+1. **Captura dos dados**
+   A automação consulta uma API pública de dados cadastrais utilizando CNPJ como entrada, recebendo informações como:
 
-Normalização dos dados, incluindo zeros à esquerda
+   * Razão Social
+   * Endereço
+   * CEP
+   * Cidade
+   * UF
+     e outros dados básicos da empresa.
 
-Exportação dos resultados para um arquivo .xlsx
+2. **Geração de planilha**
+   Os dados retornados são tratados e armazenados automaticamente em uma planilha Excel, que serve como base para a segunda etapa.
 
-Tratamento automático para limite de requisição (HTTP 429)
+3. **Automação de cadastro na Prefeitura**
+   Utilizando Selenium, o script acessa o portal da Prefeitura e preenche automaticamente o formulário de solicitação de cadastro para cada empresa da planilha.
 
-Continuidade automática: se o Excel existir, o script retoma de onde parou
+   O robô:
 
-Ignora CNPJs duplicados já consultados
+   * Abre o navegador
+   * Preenche os campos com os dados da planilha
+   * Envia o formulário
+   * Verifica se o CNPJ já está cadastrado e, se estiver, segue para o próximo registro sem interromper o processo
+
+4. **Execução totalmente automatizada**
+   Uma vez iniciado, o fluxo completo roda do início ao fim sem necessidade de intervenção manual.
+
+## Tecnologias utilizadas
+
+* Python
+* Selenium WebDriver
+* Pandas
+* ChromeDriver
+
+## Observações
+
+* Nenhuma informação sensível ou restrita foi incluída no repositório.
+* O código e o exemplo de automação são genéricos e podem ser adaptados para qualquer outro portal de cadastro público.
+
+## Objetivo educacional
+
+O projeto foi desenvolvido como exercício prático de:
+
+* Automação de processos repetitivos
+* Web scraping
+* Manipulação de dados
+* Interação com sistemas Web via Selenium
+
+---
+
+Sinta-se à vontade para usar como estudo ou adaptar para outras necessidades.
