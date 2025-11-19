@@ -4,8 +4,8 @@ import pandas as pd
 import time
 import os
 
-ARQUIVO_CNPJS = "C:/Users/thiagorotundo/Documents/sistemas/vscode jhsf/automacoes/cnpjs.csv"
-ARQUIVO_SAIDA = "C:/Users/thiagorotundo/Documents/sistemas/vscode jhsf/automacoes/dados_cnpjs_invertexto.xlsx"
+ARQUIVO_CNPJS = "local_do_arquivo"
+ARQUIVO_SAIDA = "local_do_arquivo"
 TOKEN = "seu token"
 
 # Lê os CNPJs 

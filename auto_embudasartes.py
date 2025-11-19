@@ -4,7 +4,7 @@ import time
 import pandas as pd
 
 # Carregar planilha
-df = pd.read_excel("C:/Users/thiagorotundo/Documents/sistemas/vscode jhsf/automacoes/dados_cnpjs_invertexto.xlsx")
+df = pd.read_excel("local_do_arquivo")
 
 # Iniciar navegador
 driver = webdriver.Chrome()
@@ -45,10 +45,10 @@ for _, row in df.iterrows():
         driver.find_element(By.NAME, "P65_COTR_NOM_UF").send_keys(row["UF"])
 
         driver.find_element(By.NAME, "P65_COTR_DES_EMAIL").clear()
-        driver.find_element(By.NAME, "P65_COTR_DES_EMAIL").send_keys("cadastroprefeitura@jhsf.com.br")
+        driver.find_element(By.NAME, "P65_COTR_DES_EMAIL").send_keys("exemplo@gmail.com")
 
         driver.find_element(By.NAME, "P65_CONFIRMA_EMAIL").clear()
-        driver.find_element(By.NAME, "P65_CONFIRMA_EMAIL").send_keys("cadastroprefeitura@jhsf.com.br")
+        driver.find_element(By.NAME, "P65_CONFIRMA_EMAIL").send_keys("exemplo@gmail.com")
 
         # Botão
         botao = driver.find_element(By.ID, "B489474186242244765")
